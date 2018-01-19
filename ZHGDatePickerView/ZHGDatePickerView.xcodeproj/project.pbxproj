@@ -38,6 +38,9 @@
 		3E7B6CA22011F79100CACB2F /* ZHG_ExportExcellEmailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7B6C892011F79100CACB2F /* ZHG_ExportExcellEmailCell.m */; };
 		3E7B6CA32011F79100CACB2F /* ZHG_ExportToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7B6C8B2011F79100CACB2F /* ZHG_ExportToolView.m */; };
 		3E7B6CA42011F79100CACB2F /* ZHG_LoadingProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7B6C8D2011F79100CACB2F /* ZHG_LoadingProgressView.m */; };
+		3E7B6CAA2011F9E200CACB2F /* WJYAlertInputTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7B6CA72011F9E200CACB2F /* WJYAlertInputTextView.m */; };
+		3E7B6CAB2011F9E200CACB2F /* WJYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7B6CA92011F9E200CACB2F /* WJYAlertView.m */; };
+		3E7B6CAF2011FA9800CACB2F /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7B6CAE2011FA9800CACB2F /* UIPlaceHolderTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +125,12 @@
 		3E7B6C8B2011F79100CACB2F /* ZHG_ExportToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHG_ExportToolView.m; sourceTree = "<group>"; };
 		3E7B6C8C2011F79100CACB2F /* ZHG_LoadingProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHG_LoadingProgressView.h; sourceTree = "<group>"; };
 		3E7B6C8D2011F79100CACB2F /* ZHG_LoadingProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHG_LoadingProgressView.m; sourceTree = "<group>"; };
+		3E7B6CA62011F9E200CACB2F /* WJYAlertInputTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJYAlertInputTextView.h; sourceTree = "<group>"; };
+		3E7B6CA72011F9E200CACB2F /* WJYAlertInputTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJYAlertInputTextView.m; sourceTree = "<group>"; };
+		3E7B6CA82011F9E200CACB2F /* WJYAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WJYAlertView.h; sourceTree = "<group>"; };
+		3E7B6CA92011F9E200CACB2F /* WJYAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WJYAlertView.m; sourceTree = "<group>"; };
+		3E7B6CAD2011FA9800CACB2F /* UIPlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPlaceHolderTextView.h; sourceTree = "<group>"; };
+		3E7B6CAE2011FA9800CACB2F /* UIPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPlaceHolderTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +189,8 @@
 				3E7B6C262011F73300CACB2F /* AppDelegate.m */,
 				3E7B6C282011F73300CACB2F /* ViewController.h */,
 				3E7B6C292011F73300CACB2F /* ViewController.m */,
+				3E7B6CAC2011FA9800CACB2F /* UIPlaceHolderTextView */,
+				3E7B6CA52011F9E200CACB2F /* AlertViewManager */,
 				3E7B6C2B2011F73300CACB2F /* Main.storyboard */,
 				3E7B6C742011F79100CACB2F /* ZHGDatePickerView.pch */,
 				3E7B6C752011F79100CACB2F /* ZHGHeader.h */,
@@ -305,6 +316,26 @@
 				3E7B6C8D2011F79100CACB2F /* ZHG_LoadingProgressView.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3E7B6CA52011F9E200CACB2F /* AlertViewManager */ = {
+			isa = PBXGroup;
+			children = (
+				3E7B6CA62011F9E200CACB2F /* WJYAlertInputTextView.h */,
+				3E7B6CA72011F9E200CACB2F /* WJYAlertInputTextView.m */,
+				3E7B6CA82011F9E200CACB2F /* WJYAlertView.h */,
+				3E7B6CA92011F9E200CACB2F /* WJYAlertView.m */,
+			);
+			path = AlertViewManager;
+			sourceTree = "<group>";
+		};
+		3E7B6CAC2011FA9800CACB2F /* UIPlaceHolderTextView */ = {
+			isa = PBXGroup;
+			children = (
+				3E7B6CAD2011FA9800CACB2F /* UIPlaceHolderTextView.h */,
+				3E7B6CAE2011FA9800CACB2F /* UIPlaceHolderTextView.m */,
+			);
+			path = UIPlaceHolderTextView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,8 +486,11 @@
 				3E7B6C2A2011F73300CACB2F /* ViewController.m in Sources */,
 				3E7B6C922011F79100CACB2F /* ZHG_CustomDateModel.m in Sources */,
 				3E7B6C9E2011F79100CACB2F /* ZHG_ExportTableViewController.m in Sources */,
+				3E7B6CAA2011F9E200CACB2F /* WJYAlertInputTextView.m in Sources */,
 				3E7B6CA12011F79100CACB2F /* ZHG_ExportExcelCell.m in Sources */,
 				3E7B6C9C2011F79100CACB2F /* ZHG_ExportExcel_Personal_VC.m in Sources */,
+				3E7B6CAB2011F9E200CACB2F /* WJYAlertView.m in Sources */,
+				3E7B6CAF2011FA9800CACB2F /* UIPlaceHolderTextView.m in Sources */,
 				3E7B6C352011F73300CACB2F /* main.m in Sources */,
 				3E7B6C982011F79100CACB2F /* ZHG_OnlyDefaultDate_VC.m in Sources */,
 				3E7B6C912011F79100CACB2F /* UIView+ZHGView.m in Sources */,
