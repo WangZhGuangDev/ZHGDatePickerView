@@ -1,0 +1,559 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E7B6C272011F73300CACB2F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7B6C262011F73300CACB2F /* AppDelegate.m */; };
+		3E7B6C2A2011F73300CACB2F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7B6C292011F73300CACB2F /* ViewController.m */; };
+		3E7B6C2D2011F73300CACB2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E7B6C2B2011F73300CACB2F /* Main.storyboard */; };
+		3E7B6C2F2011F73300CACB2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E7B6C2E2011F73300CACB2F /* Assets.xcassets */; };
+		3E7B6C322011F73300CACB2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E7B6C302011F73300CACB2F /* LaunchScreen.storyboard */; };
+		3E7B6C352011F73300CACB2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7B6C342011F73300CACB2F /* main.m */; };
+		3E7B6C3F2011F73300CACB2F /* ZHGDatePickerViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7B6C3E2011F73300CACB2F /* ZHGDatePickerViewTests.m */; };
+		3E7B6C4A2011F73300CACB2F /* ZHGDatePickerViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7B6C492011F73300CACB2F /* ZHGDatePickerViewUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3E7B6C3B2011F73300CACB2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E7B6C1A2011F73300CACB2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E7B6C212011F73300CACB2F;
+			remoteInfo = ZHGDatePickerView;
+		};
+		3E7B6C462011F73300CACB2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E7B6C1A2011F73300CACB2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E7B6C212011F73300CACB2F;
+			remoteInfo = ZHGDatePickerView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3E7B6C222011F73300CACB2F /* ZHGDatePickerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZHGDatePickerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E7B6C252011F73300CACB2F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3E7B6C262011F73300CACB2F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3E7B6C282011F73300CACB2F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3E7B6C292011F73300CACB2F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3E7B6C2C2011F73300CACB2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3E7B6C2E2011F73300CACB2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3E7B6C312011F73300CACB2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3E7B6C332011F73300CACB2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E7B6C342011F73300CACB2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3E7B6C3A2011F73300CACB2F /* ZHGDatePickerViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZHGDatePickerViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E7B6C3E2011F73300CACB2F /* ZHGDatePickerViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHGDatePickerViewTests.m; sourceTree = "<group>"; };
+		3E7B6C402011F73300CACB2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E7B6C452011F73300CACB2F /* ZHGDatePickerViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZHGDatePickerViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E7B6C492011F73300CACB2F /* ZHGDatePickerViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHGDatePickerViewUITests.m; sourceTree = "<group>"; };
+		3E7B6C4B2011F73300CACB2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E7B6C1F2011F73300CACB2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E7B6C372011F73300CACB2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E7B6C422011F73300CACB2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E7B6C192011F73300CACB2F = {
+			isa = PBXGroup;
+			children = (
+				3E7B6C242011F73300CACB2F /* ZHGDatePickerView */,
+				3E7B6C3D2011F73300CACB2F /* ZHGDatePickerViewTests */,
+				3E7B6C482011F73300CACB2F /* ZHGDatePickerViewUITests */,
+				3E7B6C232011F73300CACB2F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3E7B6C232011F73300CACB2F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E7B6C222011F73300CACB2F /* ZHGDatePickerView.app */,
+				3E7B6C3A2011F73300CACB2F /* ZHGDatePickerViewTests.xctest */,
+				3E7B6C452011F73300CACB2F /* ZHGDatePickerViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E7B6C242011F73300CACB2F /* ZHGDatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				3E7B6C252011F73300CACB2F /* AppDelegate.h */,
+				3E7B6C262011F73300CACB2F /* AppDelegate.m */,
+				3E7B6C282011F73300CACB2F /* ViewController.h */,
+				3E7B6C292011F73300CACB2F /* ViewController.m */,
+				3E7B6C2B2011F73300CACB2F /* Main.storyboard */,
+				3E7B6C2E2011F73300CACB2F /* Assets.xcassets */,
+				3E7B6C302011F73300CACB2F /* LaunchScreen.storyboard */,
+				3E7B6C332011F73300CACB2F /* Info.plist */,
+				3E7B6C342011F73300CACB2F /* main.m */,
+			);
+			path = ZHGDatePickerView;
+			sourceTree = "<group>";
+		};
+		3E7B6C3D2011F73300CACB2F /* ZHGDatePickerViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				3E7B6C3E2011F73300CACB2F /* ZHGDatePickerViewTests.m */,
+				3E7B6C402011F73300CACB2F /* Info.plist */,
+			);
+			path = ZHGDatePickerViewTests;
+			sourceTree = "<group>";
+		};
+		3E7B6C482011F73300CACB2F /* ZHGDatePickerViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3E7B6C492011F73300CACB2F /* ZHGDatePickerViewUITests.m */,
+				3E7B6C4B2011F73300CACB2F /* Info.plist */,
+			);
+			path = ZHGDatePickerViewUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3E7B6C212011F73300CACB2F /* ZHGDatePickerView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E7B6C4E2011F73300CACB2F /* Build configuration list for PBXNativeTarget "ZHGDatePickerView" */;
+			buildPhases = (
+				3E7B6C1E2011F73300CACB2F /* Sources */,
+				3E7B6C1F2011F73300CACB2F /* Frameworks */,
+				3E7B6C202011F73300CACB2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZHGDatePickerView;
+			productName = ZHGDatePickerView;
+			productReference = 3E7B6C222011F73300CACB2F /* ZHGDatePickerView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3E7B6C392011F73300CACB2F /* ZHGDatePickerViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E7B6C512011F73300CACB2F /* Build configuration list for PBXNativeTarget "ZHGDatePickerViewTests" */;
+			buildPhases = (
+				3E7B6C362011F73300CACB2F /* Sources */,
+				3E7B6C372011F73300CACB2F /* Frameworks */,
+				3E7B6C382011F73300CACB2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E7B6C3C2011F73300CACB2F /* PBXTargetDependency */,
+			);
+			name = ZHGDatePickerViewTests;
+			productName = ZHGDatePickerViewTests;
+			productReference = 3E7B6C3A2011F73300CACB2F /* ZHGDatePickerViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3E7B6C442011F73300CACB2F /* ZHGDatePickerViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E7B6C542011F73300CACB2F /* Build configuration list for PBXNativeTarget "ZHGDatePickerViewUITests" */;
+			buildPhases = (
+				3E7B6C412011F73300CACB2F /* Sources */,
+				3E7B6C422011F73300CACB2F /* Frameworks */,
+				3E7B6C432011F73300CACB2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E7B6C472011F73300CACB2F /* PBXTargetDependency */,
+			);
+			name = ZHGDatePickerViewUITests;
+			productName = ZHGDatePickerViewUITests;
+			productReference = 3E7B6C452011F73300CACB2F /* ZHGDatePickerViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3E7B6C1A2011F73300CACB2F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = DDing_Work;
+				TargetAttributes = {
+					3E7B6C212011F73300CACB2F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					3E7B6C392011F73300CACB2F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3E7B6C212011F73300CACB2F;
+					};
+					3E7B6C442011F73300CACB2F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3E7B6C212011F73300CACB2F;
+					};
+				};
+			};
+			buildConfigurationList = 3E7B6C1D2011F73300CACB2F /* Build configuration list for PBXProject "ZHGDatePickerView" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3E7B6C192011F73300CACB2F;
+			productRefGroup = 3E7B6C232011F73300CACB2F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3E7B6C212011F73300CACB2F /* ZHGDatePickerView */,
+				3E7B6C392011F73300CACB2F /* ZHGDatePickerViewTests */,
+				3E7B6C442011F73300CACB2F /* ZHGDatePickerViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3E7B6C202011F73300CACB2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E7B6C322011F73300CACB2F /* LaunchScreen.storyboard in Resources */,
+				3E7B6C2F2011F73300CACB2F /* Assets.xcassets in Resources */,
+				3E7B6C2D2011F73300CACB2F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E7B6C382011F73300CACB2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E7B6C432011F73300CACB2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E7B6C1E2011F73300CACB2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E7B6C2A2011F73300CACB2F /* ViewController.m in Sources */,
+				3E7B6C352011F73300CACB2F /* main.m in Sources */,
+				3E7B6C272011F73300CACB2F /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E7B6C362011F73300CACB2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E7B6C3F2011F73300CACB2F /* ZHGDatePickerViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E7B6C412011F73300CACB2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E7B6C4A2011F73300CACB2F /* ZHGDatePickerViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3E7B6C3C2011F73300CACB2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E7B6C212011F73300CACB2F /* ZHGDatePickerView */;
+			targetProxy = 3E7B6C3B2011F73300CACB2F /* PBXContainerItemProxy */;
+		};
+		3E7B6C472011F73300CACB2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E7B6C212011F73300CACB2F /* ZHGDatePickerView */;
+			targetProxy = 3E7B6C462011F73300CACB2F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3E7B6C2B2011F73300CACB2F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E7B6C2C2011F73300CACB2F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3E7B6C302011F73300CACB2F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E7B6C312011F73300CACB2F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3E7B6C4C2011F73300CACB2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3E7B6C4D2011F73300CACB2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3E7B6C4F2011F73300CACB2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9N6P88TN8F;
+				INFOPLIST_FILE = ZHGDatePickerView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.woziji.com.ZHGDatePickerView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3E7B6C502011F73300CACB2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9N6P88TN8F;
+				INFOPLIST_FILE = ZHGDatePickerView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.woziji.com.ZHGDatePickerView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3E7B6C522011F73300CACB2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9N6P88TN8F;
+				INFOPLIST_FILE = ZHGDatePickerViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.woziji.com.ZHGDatePickerViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZHGDatePickerView.app/ZHGDatePickerView";
+			};
+			name = Debug;
+		};
+		3E7B6C532011F73300CACB2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9N6P88TN8F;
+				INFOPLIST_FILE = ZHGDatePickerViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.woziji.com.ZHGDatePickerViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZHGDatePickerView.app/ZHGDatePickerView";
+			};
+			name = Release;
+		};
+		3E7B6C552011F73300CACB2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9N6P88TN8F;
+				INFOPLIST_FILE = ZHGDatePickerViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.woziji.com.ZHGDatePickerViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZHGDatePickerView;
+			};
+			name = Debug;
+		};
+		3E7B6C562011F73300CACB2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9N6P88TN8F;
+				INFOPLIST_FILE = ZHGDatePickerViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.woziji.com.ZHGDatePickerViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZHGDatePickerView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3E7B6C1D2011F73300CACB2F /* Build configuration list for PBXProject "ZHGDatePickerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E7B6C4C2011F73300CACB2F /* Debug */,
+				3E7B6C4D2011F73300CACB2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E7B6C4E2011F73300CACB2F /* Build configuration list for PBXNativeTarget "ZHGDatePickerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E7B6C4F2011F73300CACB2F /* Debug */,
+				3E7B6C502011F73300CACB2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E7B6C512011F73300CACB2F /* Build configuration list for PBXNativeTarget "ZHGDatePickerViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E7B6C522011F73300CACB2F /* Debug */,
+				3E7B6C532011F73300CACB2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E7B6C542011F73300CACB2F /* Build configuration list for PBXNativeTarget "ZHGDatePickerViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E7B6C552011F73300CACB2F /* Debug */,
+				3E7B6C562011F73300CACB2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3E7B6C1A2011F73300CACB2F /* Project object */;
+}
