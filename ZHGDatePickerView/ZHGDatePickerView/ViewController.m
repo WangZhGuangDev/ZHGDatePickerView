@@ -16,8 +16,6 @@
 #import "ZHG_ToolBarDatePickerView.h"
 #import "ZHG_ExportTableViewController.h"
 
-#import "WJYAlertView.h"
-#import "WJYAlertInputTextView.h"
 
 @interface ViewController ()
 
@@ -38,7 +36,7 @@
 #pragma mark - UITableViewDataSource
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return 8;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -131,20 +129,7 @@
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
-        case 8: {
-            [WJYAlertView showTwoButtonsWithTitle:@"提示信息" Message:@"这里为提示的信息内容，里面会根据内容的高度进行计算，当大于弹出窗默认的高度时会自行适应高度(并自动转成UITextView来加载内容)" ButtonType:WJYAlertViewButtonTypeNone ButtonTitle:@"取消" Click:^{
-                NSLog(@"您点取消事件");
-            } ButtonType:WJYAlertViewButtonTypeNone ButtonTitle:@"确定" Click:^{
-                NSLog(@"你点确定事件");
-            }];
-        }
-        case 9: {
-            [WJYAlertView showMultipleButtonsWithTitle:@"信息内容" Message:@"可以设置多个的Button,同样也是可以有不同的样式效果" Click:^(NSInteger index) {
-                NSLog(@"你点击第几个%zi", index);
-            } Buttons:@{@(WJYAlertViewButtonTypeDefault):@"确定"},@{@(WJYAlertViewButtonTypeCancel):@"取消"},@{@(WJYAlertViewButtonTypeWarn):@"知道了"}, nil];
-            break;
-        }
-            break;
+        
         default:
             break;
     }
