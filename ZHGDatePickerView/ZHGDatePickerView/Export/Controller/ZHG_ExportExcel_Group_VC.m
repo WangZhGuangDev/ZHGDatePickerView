@@ -147,7 +147,7 @@
 #pragma mark - SEL Actions
     
 -(void)didselectFirstRowWithTableView:(UITableView *)tableView {
-    
+    [self.view endEditing:YES];
     [ZHG_AlertView alertWithMessage:@"带右箭头的是跳转"
                           leftTitle:nil
                          rightTitle:nil
@@ -176,9 +176,8 @@
 }
 
 - (void)exportExcelBtnAction {
+    
     [self.view endEditing:YES];
-    
-    
     if (![NSString regexWithEmailAddress:self.emailAddress]) {
     
         [ZHG_AlertView alertWithMessage:@"对不起\n您输入的邮箱格式不正确\n请重新输入"

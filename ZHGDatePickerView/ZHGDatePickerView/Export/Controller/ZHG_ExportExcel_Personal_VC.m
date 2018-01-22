@@ -36,7 +36,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"导出";
-
 }
 
 
@@ -161,8 +160,8 @@
 }
 
 - (void)exportExcelBtnAction {
-    [self.view endEditing:YES];
     
+    [self.view endEditing:YES];
     if (![NSString regexWithEmailAddress:self.emailAddress]) {
         [ZHG_AlertView alertWithMessage:@"对不起\n您输入的邮箱格式不正确\n请重新输入"
                               leftTitle:nil
