@@ -107,6 +107,12 @@
         case 1: {
             ZHG_ToolBarDatePickerView *datePickerView = [[ZHG_ToolBarDatePickerView alloc] initWithFrame:SCREEN_BOUNDS];
             datePickerView.datePickerType = ZHG_CustomDatePickerView_Type_YearMonthDayHourMinute;
+
+            /*
+            "select_time" = "2019-02-28";
+            "select_timeType" = 1;
+            "start_time" = "2018-01-23"; min
+            */
             
             //默认大于最小（也可以等于）且当前日期处于两者之间
             datePickerView.defaultDate = [NSDate dateFromString:@"2025-03-31 12:00" formatter:@"yyyy-MM-dd HH:mm"];

@@ -25,8 +25,6 @@
 @property (nonatomic, strong) ZHG_CustomDatePickerView *datePickerEnd;
 @property (nonatomic, strong) ZHG_ExportToolView *exportToolView;
 @property (nonatomic, strong) NSString *emailAddress;
-@property (nonatomic, strong) NSMutableArray *uidsArray;
-@property (nonatomic, strong) NSMutableArray *selectedPersons;
 
 @end
 
@@ -214,7 +212,7 @@
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
-        progressView.text = @"导出失败";
+        progressView.progressViewStyle = ZHGProgressViewStyleSuccess;
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [progressView removeFromSuperview];
@@ -276,20 +274,6 @@
         _dataArray = [NSMutableArray arrayWithObjects:model0,model1,model2,model3, nil];
     }
     return _dataArray;
-}
-
--(NSMutableArray *)uidsArray {
-    if (_uidsArray == nil) {
-        _uidsArray = [NSMutableArray array];
-    }
-    return _uidsArray;
-}
-
--(NSMutableArray *)selectedPersons {
-    if (_selectedPersons == nil) {
-        _selectedPersons = [NSMutableArray array];
-    }
-    return _selectedPersons;
 }
 
 #pragma mark - private

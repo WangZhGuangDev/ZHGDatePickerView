@@ -2152,7 +2152,7 @@ static NSInteger MINUTECOUNT = 60;
             }
         }
     }
-    
+    daysCount = [self year:self.defaultDateModel.year month:self.defaultDateModel.month];
     [self reloadAllComponents];
 }
 

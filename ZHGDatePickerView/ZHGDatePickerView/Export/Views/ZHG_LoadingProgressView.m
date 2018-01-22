@@ -13,6 +13,7 @@
 @property (nonatomic, strong) UIView *backView;
 @property (nonatomic, strong) UIActivityIndicatorView *indicator;
 @property (nonatomic, strong) UIImageView *failImageView;
+@property (nonatomic, strong) UIImageView *successImageView;
 @property (nonatomic, strong) UILabel *textLabel;
 
 @end
@@ -32,30 +33,45 @@
     [self addSubview:self.backView];
     [self.backView addSubview:self.indicator];
     [self.backView addSubview:self.failImageView];
+    [self.backView addSubview:self.successImageView];
     [self.backView addSubview:self.textLabel];
     [self.indicator startAnimating];
     
     self.failImageView.hidden = YES;
+    self.successImageView.hidden = YES;
 }
 
 -(void)layoutSubviews {
     [super layoutSubviews];
-    self.backView.frame = CGRectMake((SCREEN_WIDTH - 130) / 2, (SCREEN_HEIGHT - 120) / 2, 130, 120);
-    self.indicator.frame = CGRectMake((self.backView.width - 38) / 2, self.backView.height - 22 - 21 - 11 - 38, 38, 38);
-    self.failImageView.frame = CGRectMake((self.backView.width - 38) / 2, self.backView.height - 22 - 21 - 11 - 38, 38, 38);
-    self.textLabel.frame = CGRectMake(0, self.backView.height - 22 - 21, 130, 21);
+    CGFloat backViewWidth = 130;
+    CGFloat backViewHeight = 120;
+    self.backView.frame = CGRectMake((SCREEN_WIDTH - backViewWidth) / 2, (SCREEN_HEIGHT - backViewHeight) / 2, backViewWidth, backViewHeight);
+    self.indicator.frame = CGRectMake((backViewWidth - 38) / 2, backViewHeight - 22 - 21 - 11 - 38, 38, 38);
+    self.failImageView.frame = CGRectMake((backViewWidth - 38) / 2, backViewHeight - 22 - 21 - 11 - 38, 38, 38);
+    self.successImageView.frame = CGRectMake((backViewWidth - 35) / 2, backViewHeight - 22 - 21 - 11 - 25, 35, 25);
+    self.textLabel.frame = CGRectMake(0, backViewHeight - 22 - 21, backViewWidth, 21);
 }
 
--(void)setText:(NSString *)text {
-    _text = text;
-    self.textLabel.text = text;
-    self.indicator.hidden = YES;
-    self.failImageView.hidden = NO;
-}
-
--(void)setProgressViewStyle:(ProgressViewStyle)progressViewStyle {
+-(void)setProgressViewStyle:(ZHGProgressViewStyle)progressViewStyle {
     _progressViewStyle = progressViewStyle;
-    
+    switch (progressViewStyle) {
+        case ZHGProgressViewStyleSuccess: {
+            self.textLabel.text = @"导出成功";
+            self.indicator.hidden = YES;
+            self.failImageView.hidden = YES;
+            self.successImageView.hidden = NO;
+        }
+            break;
+        case ZHGProgressViewStyleFailed: {
+            self.textLabel.text = @"导出失败";
+            self.indicator.hidden = YES;
+            self.failImageView.hidden = NO;
+            self.successImageView.hidden = YES;
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 -(UIView *)backView {
@@ -77,11 +93,16 @@
 
 -(UIImageView *)failImageView {
     if (_failImageView == nil) {
-        //exportExcel_Success
-        //exportExcel_Fail
         _failImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"exportExcel_Fail"]];
     }
     return _failImageView;
+}
+
+-(UIImageView *)successImageView {
+    if (_successImageView == nil) {
+        _successImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"exportExcel_Success"]];
+    }
+    return _successImageView;
 }
 
 -(UILabel *)textLabel {
