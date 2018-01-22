@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E4792382015787300DC678C /* ZHG_AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4792372015787300DC678C /* ZHG_AlertView.m */; };
+		3E47923D2015CA5F00DC678C /* ZHG_ExportExcelBase_VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E47923C2015CA5F00DC678C /* ZHG_ExportExcelBase_VC.m */; };
 		3E7B6C272011F73300CACB2F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7B6C262011F73300CACB2F /* AppDelegate.m */; };
 		3E7B6C2A2011F73300CACB2F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7B6C292011F73300CACB2F /* ViewController.m */; };
 		3E7B6C2D2011F73300CACB2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E7B6C2B2011F73300CACB2F /* Main.storyboard */; };
@@ -61,6 +62,8 @@
 /* Begin PBXFileReference section */
 		3E4792362015787300DC678C /* ZHG_AlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHG_AlertView.h; sourceTree = "<group>"; };
 		3E4792372015787300DC678C /* ZHG_AlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHG_AlertView.m; sourceTree = "<group>"; };
+		3E47923B2015CA5F00DC678C /* ZHG_ExportExcelBase_VC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHG_ExportExcelBase_VC.h; sourceTree = "<group>"; };
+		3E47923C2015CA5F00DC678C /* ZHG_ExportExcelBase_VC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHG_ExportExcelBase_VC.m; sourceTree = "<group>"; };
 		3E7B6C222011F73300CACB2F /* ZHGDatePickerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZHGDatePickerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E7B6C252011F73300CACB2F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3E7B6C262011F73300CACB2F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -290,6 +293,8 @@
 				3E7B6C7D2011F79100CACB2F /* ZHG_ExportExcel_VC.m */,
 				3E7B6C7E2011F79100CACB2F /* ZHG_ExportTableViewController.h */,
 				3E7B6C7F2011F79100CACB2F /* ZHG_ExportTableViewController.m */,
+				3E47923B2015CA5F00DC678C /* ZHG_ExportExcelBase_VC.h */,
+				3E47923C2015CA5F00DC678C /* ZHG_ExportExcelBase_VC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -466,6 +471,7 @@
 				3E7B6C952011F79100CACB2F /* ZHG_LastDefault_VC.m in Sources */,
 				3E7B6C9D2011F79100CACB2F /* ZHG_ExportExcel_VC.m in Sources */,
 				3E7B6C2A2011F73300CACB2F /* ViewController.m in Sources */,
+				3E47923D2015CA5F00DC678C /* ZHG_ExportExcelBase_VC.m in Sources */,
 				3E7B6C922011F79100CACB2F /* ZHG_CustomDateModel.m in Sources */,
 				3E7B6C9E2011F79100CACB2F /* ZHG_ExportTableViewController.m in Sources */,
 				3E7B6CA12011F79100CACB2F /* ZHG_ExportExcelCell.m in Sources */,

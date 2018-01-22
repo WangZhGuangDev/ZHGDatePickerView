@@ -13,12 +13,13 @@
 #import "ZHG_ExportCellModel.h"
 #import "ZHG_ExportToolView.h"
 
-@interface ZHG_ExportExcel_Group_VC ()<UITableViewDelegate,UITableViewDataSource>
+@interface ZHG_ExportExcel_Group_VC ()
+//<UITableViewDelegate,UITableViewDataSource>
 {
     BOOL _beginTimeExpand;
     BOOL _endTimeExpand;
 }
-@property (nonatomic, strong) UITableView *tableView;
+
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @property (nonatomic, strong) ZHG_CustomDatePickerView *datePickerBegin;
 @property (nonatomic, strong) ZHG_CustomDatePickerView *datePickerEnd;
@@ -34,24 +35,6 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"导出";
-    [self initTheTableView];
-}
-
--(void)initTheTableView {
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:(UITableViewStyleGrouped)];
-    
-    if ([[UIDevice currentDevice].systemVersion floatValue] >= 11.0) {
-        _tableView.estimatedRowHeight = 0;
-        _tableView.estimatedSectionHeaderHeight = 0;
-        _tableView.estimatedSectionFooterHeight = 0;
-    }
- 
-    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    _tableView.backgroundColor = [UIColor colorWithHexString:@"#F8F8F8"];
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
-    _tableView.tableFooterView = [self exportToolView];
-    [self.view addSubview:self.tableView];
 }
 
 #pragma mark - <UITableViewDataSource>

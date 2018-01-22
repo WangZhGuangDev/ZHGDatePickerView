@@ -15,7 +15,8 @@
 #import "ZHG_CustomDatePickerView.h"
 
 
-@interface ZHG_ExportExcel_VC ()<UITableViewDelegate,UITableViewDataSource>
+@interface ZHG_ExportExcel_VC ()
+//<UITableViewDelegate,UITableViewDataSource>
 {
     BOOL _dataTypeExpand;
     BOOL _teamInforExpand;
@@ -26,7 +27,7 @@
 @property (nonatomic, strong) NSArray *dataArray;
 @property (nonatomic, strong) NSMutableArray *teamArray;
 @property (nonatomic, strong) NSMutableArray *modelArray;
-@property (nonatomic, strong) UITableView *tableView;
+//@property (nonatomic, strong) UITableView *tableView;
 
 @property (nonatomic, strong) ZHG_CustomPickerView *dataPickerView;
 @property (nonatomic, strong) ZHG_CustomPickerView *teamPickerView;
@@ -44,9 +45,9 @@
     [super viewDidLoad];
 
     [self updateTeamArray];
-    [self.view addSubview:self.tableView];
     
     self.navigationItem.title = @"导出excel";
+ 
 }
 
 #pragma mark - <UITableViewDataSource>
@@ -185,7 +186,7 @@
 #pragma mark - SEL Actions
 
 - (void)exportExcelBtnAction {
-    [self.view endEditing:YES];
+    
     
     if (![NSString regexWithEmailAddress:self.emailAddress]) {
         [ZHG_AlertView alertWithMessage:@"对不起\n您输入的邮箱格式不正确\n请重新输入"
@@ -262,25 +263,25 @@
     return _datePickerView;
 }
 
-- (UITableView *)tableView {
-    if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStyleGrouped];
-        
-        if ([[UIDevice currentDevice].systemVersion floatValue] >= 11.0) {
-            _tableView.estimatedRowHeight = 0;
-            _tableView.estimatedSectionHeaderHeight = 0;
-            _tableView.estimatedSectionFooterHeight = 0;
-        }
-        
-        _tableView.backgroundColor = [UIColor colorWithHexString:@"#F8F8F8"];
-        _tableView.dataSource = self;
-        _tableView.delegate = self;
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        _tableView.tableFooterView = [self exportToolView];
-    }
-    
-    return _tableView;
-}
+//- (UITableView *)tableView {
+//    if (!_tableView) {
+//        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStyleGrouped];
+//
+//        if ([[UIDevice currentDevice].systemVersion floatValue] >= 11.0) {
+//            _tableView.estimatedRowHeight = 0;
+//            _tableView.estimatedSectionHeaderHeight = 0;
+//            _tableView.estimatedSectionFooterHeight = 0;
+//        }
+//
+//        _tableView.backgroundColor = [UIColor colorWithHexString:@"#F8F8F8"];
+//        _tableView.dataSource = self;
+//        _tableView.delegate = self;
+//        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+//        _tableView.tableFooterView = [self exportToolView];
+//    }
+//
+//    return _tableView;
+//}
 
 -(ZHG_ExportToolView *)exportToolView {
     if (_exportToolView == nil) {
