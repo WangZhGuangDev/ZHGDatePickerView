@@ -12,7 +12,6 @@
 #import "ZHG_ExportExcelCell.h"
 #import "ZHG_ExportCellModel.h"
 #import "ZHG_ExportToolView.h"
-#import "ZHG_AlertView.h"
 
 @interface ZHG_ExportExcel_Group_VC ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -33,6 +32,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.navigationItem.title = @"导出";
     [self initTheTableView];
 }
@@ -165,7 +165,14 @@
     
 -(void)didselectFirstRowWithTableView:(UITableView *)tableView {
     
-    NSLog(@"带右箭头的是跳转");
+    [ZHG_AlertView alertWithMessage:@"带右箭头的是跳转"
+                          leftTitle:nil
+                         rightTitle:nil
+                        leftHandler:^{
+                            NSLog(@"点击了左边的按钮");
+                        } rightHandler:^{
+                            NSLog(@"点击了右边的按钮");
+                        }];
     
 }
 
@@ -183,10 +190,6 @@
         }
     }
     [self.tableView reloadData];
-}
-
--(void)emailHelpBtnAction {
-    
 }
 
 - (void)exportExcelBtnAction {

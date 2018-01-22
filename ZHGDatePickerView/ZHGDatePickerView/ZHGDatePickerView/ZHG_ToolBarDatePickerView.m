@@ -93,7 +93,6 @@ static CGFloat CONTENTVIEWHEIGHT = 254;
     if (_titleLabel == nil) {
         UILabel *label = [[UILabel alloc] initWithFrame:(CGRectMake((SCREEN_WIDTH - 100)/2, 0, 100, 45))];
         label.text = @"选择日期";
-//        label.textColor = DDCOLOR_555555;
         label.textAlignment = NSTextAlignmentCenter;
         label.font = [UIFont systemFontOfSize:16.f];
         _titleLabel = label;

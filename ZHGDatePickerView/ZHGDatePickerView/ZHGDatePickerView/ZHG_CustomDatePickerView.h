@@ -31,7 +31,9 @@ typedef NS_ENUM(NSInteger, ZHG_CustomDatePickerView_Type) {
  默认日期，即初始化时默认滚动到的日期，若是设置了最小日期，默认日期一定要大于或等于最小日期，不能小于最小日期（小于最小日期无意义）；同理，若是设置了最大日期，默认日期不能大于最大日期
  */
 @property (nonatomic, strong) NSDate *defaultDate;
-
+/**
+ 时间选择 block ，选择的 NSString 和 NSDate 类型
+ */
 @property (nonatomic, copy) void(^DatePickerSelectedBlock)(NSString *,NSDate *);
 
 /** 是否限制今天为最大日期，默认为NO，若设置为YES，则最大只能选择到今日，暂时只对DD_CustomDatePickerView_Type_YearMonthDay 做了处理 */

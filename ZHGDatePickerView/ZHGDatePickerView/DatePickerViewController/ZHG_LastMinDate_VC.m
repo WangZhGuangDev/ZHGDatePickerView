@@ -59,7 +59,7 @@
             cell.textLabel.text = @"先设置默认，再最大，再设置最小";
             break;
         case 4:
-            cell.textLabel.text = @"异常情况，最大小于最小";
+            cell.textLabel.text = @"异常情况，最大小于最小，直接闪退";
             break;
         default:
             break;

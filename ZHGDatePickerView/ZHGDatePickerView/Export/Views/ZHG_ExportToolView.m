@@ -31,13 +31,28 @@
     [exportButton setTitle:@"导出" forState:(UIControlStateNormal)];
     [exportButton setTitleColor:[UIColor colorWithHexString:@"#FFFFFF"] forState:(UIControlStateNormal)];
     [exportButton addTarget:self action:@selector(exportExcel:) forControlEvents:(UIControlEventTouchUpInside)];
-    exportButton.backgroundColor = [UIColor colorWithHexString:@"#2DC4B9"];
+    exportButton.backgroundColor = [UIColor colorWithHexString:@"#DB0000"];
     [exportButton.layer setCornerRadius:2.f];
+    exportButton.layer.masksToBounds = YES;
+    [exportButton setBackgroundImage:[self imageWithColor:[UIColor colorWithHexString:@"#9F0000"]] forState:(UIControlStateHighlighted)];
     exportButton.titleLabel.font = FontSize18;
     [exportButton setFrame:CGRectMake(15, CGRectGetMaxY(label.frame) + 40, frame.size.width - 40, 47)];
     [self addSubview:exportButton];
     
 }
+
+- (UIImage *)imageWithColor:(UIColor *)aColor
+{
+    CGRect rect = CGRectMake(0, 0, 1, 1);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [aColor CGColor]);
+    CGContextFillRect(context, rect);
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return img;
+}
+
 
 -(void)exportExcel:(UIButton *)sender {
     

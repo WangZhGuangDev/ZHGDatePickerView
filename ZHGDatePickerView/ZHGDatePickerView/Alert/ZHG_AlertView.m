@@ -110,14 +110,14 @@ static const CGFloat kAlertWith = 260;
 -(UIView *)horizontal_line {
     if (!_horizontal_line) {
         _horizontal_line = [[UIView alloc] init];
-        _horizontal_line.backgroundColor = [UIColor colorWithHexString:@"eeeeee"];
+        _horizontal_line.backgroundColor = [UIColor colorWithHexString:@"C8C8C8"];
     }
     return _horizontal_line;
 }
 -(UIView *)vertical_line {
     if (!_vertical_line) {
         _vertical_line = [[UIView alloc] init];
-        _vertical_line.backgroundColor = [UIColor colorWithHexString:@"eeeeee"];
+        _vertical_line.backgroundColor = [UIColor colorWithHexString:@"C8C8C8"];
     }
     return _vertical_line;
 }
@@ -140,7 +140,7 @@ static const CGFloat kAlertWith = 260;
         [_okButton setTitle:@"确定" forState:(UIControlStateNormal)];
         [_okButton setBackgroundImage:[self  imageWithColor:[UIColor colorWithHexString:@"#E1E1E1"] withFrame:(CGRectMake(0, 0, 1, 1))] forState:(UIControlStateHighlighted)];
         [_okButton addTarget:self action:@selector(okAction:) forControlEvents:(UIControlEventTouchUpInside)];
-        [_okButton setTitleColor:[UIColor colorWithHexString:@"#27C2B6"] forState:(UIControlStateNormal)];
+        [_okButton setTitleColor:[UIColor colorWithHexString:@"#DB0000"] forState:(UIControlStateNormal)];
     }
     return _okButton;
 }

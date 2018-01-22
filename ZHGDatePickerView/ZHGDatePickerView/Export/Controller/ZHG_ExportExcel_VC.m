@@ -14,7 +14,6 @@
 #import "ZHG_ExportExcelCell.h"
 #import "ZHG_CustomDatePickerView.h"
 
-#import "ZHG_AlertView.h"
 
 @interface ZHG_ExportExcel_VC ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -23,8 +22,6 @@
     BOOL _exportTimeExpand;
 }
 
-@property (nonatomic, assign) NSInteger dataSelectIndex;
-@property (nonatomic, assign) NSInteger teamSelectIndex;
 
 @property (nonatomic, strong) NSArray *dataArray;
 @property (nonatomic, strong) NSMutableArray *teamArray;
@@ -45,8 +42,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.dataSelectIndex = 0;
-    self.teamSelectIndex = 0;
 
     [self updateTeamArray];
     [self.view addSubview:self.tableView];
@@ -120,10 +115,6 @@
     
     switch (indexPath.section) {
         case 0: {
-            if (self.isFromSign) {
-                return;
-            }
-            
             _dataTypeExpand = !_dataTypeExpand;
             _teamInforExpand = NO;
             _exportTimeExpand = NO;
@@ -132,11 +123,6 @@
         }
             break;
         case 1: {
-            
-            if (self.isFromSign) {
-                return;
-            }
-            
             _teamInforExpand = !_teamInforExpand;
             _dataTypeExpand = NO;
             _exportTimeExpand = NO;
@@ -166,9 +152,6 @@
             if (section == 2)
                 model.isHiddenSeparator = !expand;
         } else {
-            if (self.isFromSign) {
-                continue;
-            }
             ZHG_ExportCellModel *model = [self.modelArray objectAtIndex:index];
             model.exportExcelCellType = ZHG_ExportExcelCellTypeArrowDown;
         }
@@ -177,11 +160,8 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section != 1) {
-        return indexPath.row == 0 ? 55.f : 160;
-    } else {
-        return self.dataSelectIndex != 2 ? (indexPath.row == 0 ? 55.f : 160) : 0.0001;
-    }
+
+    return indexPath.row == 0 ? 55.f : 160;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -203,9 +183,6 @@
 }
 
 #pragma mark - SEL Actions
--(void)emailHelpBtnAction {
-    
-}
 
 - (void)exportExcelBtnAction {
     [self.view endEditing:YES];
@@ -246,7 +223,6 @@
         _dataPickerView.PikcerViewSelectBlock = ^(NSString *title, NSInteger selectIndex) {
             ZHG_ExportCellModel *model0 = [weakSelf.modelArray objectAtIndex:0];
             model0.rightTitle = title;
-            weakSelf.dataSelectIndex = selectIndex;
             [weakSelf updateTeamArray];
             [weakSelf.tableView reloadData];
         };
@@ -263,7 +239,6 @@
         _teamPickerView.PikcerViewSelectBlock = ^(NSString *title, NSInteger selectIndex) {
             ZHG_ExportCellModel *model1 = [weakSelf.modelArray objectAtIndex:1];
             model1.rightTitle = title;
-            weakSelf.teamSelectIndex = selectIndex;
             [weakSelf.tableView reloadData];
         };
     }
@@ -367,6 +342,5 @@
 -(void)updateTeamArray {
     self.teamPickerView.dataSource = self.teamArray;
 }
-
 
 @end

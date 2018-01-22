@@ -10,6 +10,5 @@
 
 @interface ZHG_ExportExcel_VC : UIViewController
 
-@property (nonatomic, assign) BOOL isFromSign;
 
 @end
