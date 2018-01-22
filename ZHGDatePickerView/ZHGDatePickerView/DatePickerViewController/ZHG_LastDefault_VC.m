@@ -56,6 +56,7 @@
             break;
         case 3:
             cell.textLabel.text = @"先设置最大，再最小，再设置默认";
+            break;
         default:
             break;
     }

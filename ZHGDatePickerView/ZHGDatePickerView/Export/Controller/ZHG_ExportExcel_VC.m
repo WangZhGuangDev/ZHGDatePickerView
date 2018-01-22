@@ -14,6 +14,8 @@
 #import "ZHG_ExportExcelCell.h"
 #import "ZHG_CustomDatePickerView.h"
 
+#import "ZHG_AlertView.h"
+
 @interface ZHG_ExportExcel_VC ()<UITableViewDelegate,UITableViewDataSource>
 {
     BOOL _dataTypeExpand;
@@ -25,7 +27,6 @@
 @property (nonatomic, assign) NSInteger teamSelectIndex;
 
 @property (nonatomic, strong) NSArray *dataArray;
-@property (nonatomic, strong) NSArray *dataTypeArray;
 @property (nonatomic, strong) NSMutableArray *teamArray;
 @property (nonatomic, strong) NSMutableArray *modelArray;
 @property (nonatomic, strong) UITableView *tableView;
@@ -210,7 +211,14 @@
     [self.view endEditing:YES];
     
     if (![NSString regexWithEmailAddress:self.emailAddress]) {
-//        [ZHGAlertView alertWithMessage:@"对不起\n您输入的邮箱格式不正确\n请重新输入"];
+        [ZHG_AlertView alertWithMessage:@"对不起\n您输入的邮箱格式不正确\n请重新输入"
+                              leftTitle:nil
+                             rightTitle:nil
+                            leftHandler:^{
+                                NSLog(@"点击了左边的按钮");
+                            } rightHandler:^{
+                                NSLog(@"点击了右边的按钮");
+                            }];
         return;
     }
 
@@ -227,7 +235,6 @@
         
     });
 }
-
 
 
 #pragma mark - config UI
@@ -324,19 +331,10 @@
 
 -(NSArray *)dataArray {
     if (_dataArray == nil) {
-        _dataArray = @[@"签到记录", @"考勤记录", @"任务记录", @"请假记录", @"公出记录", @"出差记录",
-                       @"加班记录", @"报销记录", @"采购记录", @"请款记录", @"通用审批记录",
-                       @"日报记录", @"周报记录", @"月报记录", @"进度汇报记录", @"通用汇报记录"];
+        _dataArray = @[@"健身记录", @"打卡记录", @"吃饭记录", @"喝水记录", @"睡觉记录", @"有氧运动记录",
+                       @"无氧运动记录", @"偷懒记录"];
     }
     return _dataArray;
-}
-
--(NSArray *)dataTypeArray {
-    if (_dataTypeArray == nil) {
-        _dataTypeArray = @[@"8", @"16", @"2", @"601", @"603", @"605", @"606", @"602", @"604",
-                           @"607", @"600", @"701", @"702", @"703", @"704", @"700",];
-    }
-    return _dataTypeArray;
 }
 
 -(NSMutableArray *)teamArray {
@@ -358,16 +356,15 @@
     NSInteger month  = [components month];
     NSString *dateStr;
     if (month == 1) {
-        dateStr = [NSString stringWithFormat:@"%ld-%02d-01 01:00",year - 1, 12];
+        dateStr = [NSString stringWithFormat:@"%ld-%02d-01 01:00",(long)year - 1, 12];
     } else {
-        dateStr = [NSString stringWithFormat:@"%ld-%02ld-01 01:00",year , month - 1];
-        dateStr = [NSString stringWithFormat:@"%ld-%02ld-01 01:00",year , month - 1];
+        dateStr = [NSString stringWithFormat:@"%ld-%02ld-01 01:00",(long)year , (long)month - 1];
+        dateStr = [NSString stringWithFormat:@"%ld-%02ld-01 01:00",(long)year , (long)month - 1];
     }
     return dateStr;
 }
 
 -(void)updateTeamArray {
-    
     self.teamPickerView.dataSource = self.teamArray;
 }
 

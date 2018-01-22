@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E4792382015787300DC678C /* ZHG_AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4792372015787300DC678C /* ZHG_AlertView.m */; };
 		3E7B6C272011F73300CACB2F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7B6C262011F73300CACB2F /* AppDelegate.m */; };
 		3E7B6C2A2011F73300CACB2F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7B6C292011F73300CACB2F /* ViewController.m */; };
 		3E7B6C2D2011F73300CACB2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E7B6C2B2011F73300CACB2F /* Main.storyboard */; };
@@ -58,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E4792362015787300DC678C /* ZHG_AlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHG_AlertView.h; sourceTree = "<group>"; };
+		3E4792372015787300DC678C /* ZHG_AlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHG_AlertView.m; sourceTree = "<group>"; };
 		3E7B6C222011F73300CACB2F /* ZHGDatePickerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZHGDatePickerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E7B6C252011F73300CACB2F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3E7B6C262011F73300CACB2F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -149,6 +152,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E4792352015785B00DC678C /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				3E4792362015787300DC678C /* ZHG_AlertView.h */,
+				3E4792372015787300DC678C /* ZHG_AlertView.m */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		3E7B6C192011F73300CACB2F = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +184,7 @@
 		3E7B6C242011F73300CACB2F /* ZHGDatePickerView */ = {
 			isa = PBXGroup;
 			children = (
+				3E4792352015785B00DC678C /* Alert */,
 				3E7B6C572011F79100CACB2F /* Category */,
 				3E7B6C672011F79100CACB2F /* DatePickerViewController */,
 				3E7B6C762011F79100CACB2F /* Export */,
@@ -457,6 +470,7 @@
 				3E7B6C9E2011F79100CACB2F /* ZHG_ExportTableViewController.m in Sources */,
 				3E7B6CA12011F79100CACB2F /* ZHG_ExportExcelCell.m in Sources */,
 				3E7B6C9C2011F79100CACB2F /* ZHG_ExportExcel_Personal_VC.m in Sources */,
+				3E4792382015787300DC678C /* ZHG_AlertView.m in Sources */,
 				3E7B6C352011F73300CACB2F /* main.m in Sources */,
 				3E7B6C982011F79100CACB2F /* ZHG_OnlyDefaultDate_VC.m in Sources */,
 				3E7B6C912011F79100CACB2F /* UIView+ZHGView.m in Sources */,

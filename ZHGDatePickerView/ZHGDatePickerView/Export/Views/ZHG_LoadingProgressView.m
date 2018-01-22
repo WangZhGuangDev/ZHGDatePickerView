@@ -53,6 +53,11 @@
     self.failImageView.hidden = NO;
 }
 
+-(void)setProgressViewStyle:(ProgressViewStyle)progressViewStyle {
+    _progressViewStyle = progressViewStyle;
+    
+}
+
 -(UIView *)backView {
     if (_backView == nil) {
         _backView = [[UIView alloc] init];
@@ -72,7 +77,9 @@
 
 -(UIImageView *)failImageView {
     if (_failImageView == nil) {
-        _failImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"UpladFail"]];
+        //exportExcel_Success
+        //exportExcel_Fail
+        _failImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"exportExcel_Fail"]];
     }
     return _failImageView;
 }

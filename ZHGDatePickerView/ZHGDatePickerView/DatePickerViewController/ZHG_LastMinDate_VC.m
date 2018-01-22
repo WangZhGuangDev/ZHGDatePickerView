@@ -33,7 +33,7 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return 5;
 }
 
 
@@ -57,6 +57,10 @@
             break;
         case 3:
             cell.textLabel.text = @"先设置默认，再最大，再设置最小";
+            break;
+        case 4:
+            cell.textLabel.text = @"异常情况，最大小于最小";
+            break;
         default:
             break;
     }
@@ -198,6 +202,15 @@
 //            datePickerView.defaultDate = [NSDate dateFromString:@"2017-03-02 12:00" formatter:@"yyyy-MM-dd HH:mm"];
 //            datePickerView.minDate = [NSDate dateFromString:@"2016-03-02 12:00" formatter:@"yyyy-MM-dd HH:mm"];
             
+            [datePickerView show];
+        }
+            break;
+        case 4: {
+            ZHG_ToolBarDatePickerView *datePickerView = [[ZHG_ToolBarDatePickerView alloc] initWithFrame:SCREEN_BOUNDS];
+            datePickerView.datePickerType = ZHG_CustomDatePickerView_Type_YearMonthDayHourMinute;
+            //最大小于最小，异常情况
+            datePickerView.maxDate = [NSDate dateFromString:@"2010-03-31 12:00" formatter:@"yyyy-MM-dd HH:mm"];
+            datePickerView.minDate = [NSDate dateFromString:@"2020-03-02 12:00" formatter:@"yyyy-MM-dd HH:mm"];
             [datePickerView show];
         }
             break;

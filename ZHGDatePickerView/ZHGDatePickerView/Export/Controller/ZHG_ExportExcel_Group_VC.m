@@ -12,7 +12,7 @@
 #import "ZHG_ExportExcelCell.h"
 #import "ZHG_ExportCellModel.h"
 #import "ZHG_ExportToolView.h"
-
+#import "ZHG_AlertView.h"
 
 @interface ZHG_ExportExcel_Group_VC ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -194,8 +194,18 @@
 - (void)exportExcelBtnAction {
     [self.view endEditing:YES];
     
+    
     if (![NSString regexWithEmailAddress:self.emailAddress]) {
-        //        [ZHGAlertView alertWithMessage:@"对不起\n您输入的邮箱格式不正确\n请重新输入"];
+    
+        [ZHG_AlertView alertWithMessage:@"对不起\n您输入的邮箱格式不正确\n请重新输入"
+                              leftTitle:nil
+                             rightTitle:nil
+                            leftHandler:^{
+                                NSLog(@"点击了左边的按钮");
+                            } rightHandler:^{
+                                NSLog(@"点击了右边的按钮");
+                            }];
+        
         return;
     }
     

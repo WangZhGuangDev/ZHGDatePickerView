@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, ProgressViewStyle) {
+    ProgressViewStyleSuccess,
+    ProgressViewStyleFailed,
+} NS_AVAILABLE_IPHONE(9_0);
+
 @interface ZHG_LoadingProgressView : UIView
 
+@property (nonatomic, assign) ProgressViewStyle progressViewStyle;
 @property (nonatomic, strong) NSString *text;
 
 @end
