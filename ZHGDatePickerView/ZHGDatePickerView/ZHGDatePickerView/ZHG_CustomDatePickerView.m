@@ -959,14 +959,19 @@ static NSInteger MINUTECOUNT = 60;
                     if (selectedMonth > _currentMonth) {
                         selectedYearIndex = _currentYear - [self.yearArray.firstObject integerValue] - 1;
                     } else {
-                        if (selectedDayIndex + 1 > _currentDay) {
-                            selectedYearIndex = _currentYear - [self.yearArray.firstObject integerValue];
-                            if ([[self.yearArray objectAtIndex:selectedYearIndex] integerValue] == _currentYear) {
-                                selectedYearIndex = selectedYearIndex - 1;
+                        if (selectedMonth == _currentMonth) {
+                            if (selectedDayIndex + 1 > _currentDay) {
+                                selectedYearIndex = _currentYear - [self.yearArray.firstObject integerValue];
+                                if ([[self.yearArray objectAtIndex:selectedYearIndex] integerValue] == _currentYear) {
+                                    selectedYearIndex = selectedYearIndex - 1;
+                                }
+                            } else {
+                                selectedYearIndex = _currentYear - [self.yearArray.firstObject integerValue];
                             }
                         } else {
                             selectedYearIndex = _currentYear - [self.yearArray.firstObject integerValue];
                         }
+                        
                     }
                     [pickerView selectRow:selectedYearIndex inComponent:0 animated:YES];
                 }
@@ -1015,7 +1020,20 @@ static NSInteger MINUTECOUNT = 60;
                     if (selectedMonth > _currentMonth) {
                         selectedMonthIndex = _currentMonth - 1;
                         [pickerView selectRow:selectedMonthIndex inComponent:1 animated:YES];
+                    } else {
+                        if (selectedMonth == _currentMonth) {
+                            if (selectedDayIndex + 1 > _currentDay) {
+                                
+                                selectedMonthIndex = row - 1;
+                            } else {
+                                selectedMonthIndex = row;
+                            }
+                        } else {
+                            selectedMonthIndex = row;
+                        }
+                        
                     }
+                    [pickerView selectRow:selectedMonthIndex inComponent:1 animated:YES];
                 }
             }
             [self reloadYear_Month_Day_ComponentsAndSelectedIndex];
